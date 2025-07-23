@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+
+patches:
+- path: dep-patch.yaml
+
+labels:
+  - pairs:
+      app: dev-app
+      env: developmeent
+
+
+commonAnnotations:
+  owner: username

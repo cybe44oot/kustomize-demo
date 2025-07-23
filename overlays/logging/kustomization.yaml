@@ -1,0 +1,3 @@
+resources: 
+- ../../base
+- log-config.yaml

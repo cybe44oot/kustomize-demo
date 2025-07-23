@@ -1,0 +1,25 @@
+resources:
+- deployment.yaml
+
+configMapGenerator: 
+- name: app-config 
+  literals: 
+    - app-mode=production 
+    - log-level=info
+
+
+secretGenerator: 
+- name: app-secret 
+  literals: 
+    - db-user=admin
+    - db-pass=secret123
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+replicas:
+  - name: myapp 
+    count: 2
+
+
+ 
