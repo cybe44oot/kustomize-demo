@@ -15,16 +15,30 @@ This repository demonstrates how to structure a multi-environment **Kustomize** 
 ## 🗂 Project Structure
 
 kustomize-demo/
-|-----base
-    |--kustomization.yaml
-    |--deployment.yaml
-|-----overlays
-    |---dev/
-      |--kustomization.yaml
-      |--dep-patch.yaml 
-    |---logging/
-      |--log-config.yaml
-      |--kustomization.yaml 
+
+
+├── base/                  # Core deployment and kustomization
+
+
+│   ├── deployment.yaml
+
+│   └── kustomization.yaml
+
+├── overlays/
+
+│   ├── dev/               # Dev-specific customizations
+
+│   │   ├── dep-patch.yaml
+
+│   │   └── kustomization.yaml
+
+│   ├── logging/           # Adds logging config (e.g., log-config ConfigMap)
+
+│   │   ├── log-config.yaml
+
+│   │   └── kustomization.yaml
+
+```
 
 # 📦 Requirements
 
